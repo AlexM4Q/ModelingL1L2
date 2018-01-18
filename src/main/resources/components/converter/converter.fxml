@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.modeling.lab1lab2.controllers.ConverterController">
+  <padding>
+    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+  </padding>
+  <GridPane hgap="5.0" vgap="5.0">
+    <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" />
+      <ColumnConstraints hgrow="ALWAYS" />
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+    </rowConstraints>
+    <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setInput_B_action" text="Задать" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+    <TextField fx:id="output_TF" editable="false" GridPane.rowIndex="2" />
+    <TextField fx:id="input_TF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Выходная строка (в постфиксной форме)" GridPane.rowIndex="1" />
+    <Label text="Входная строка (в инфиксной форме)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+  </GridPane>
+  <GridPane hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" vgap="5.0">
+    <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+    </rowConstraints>
+    <Label text="Стек" />
+    <Label text="Таблица принятия решений" GridPane.columnIndex="1" />
+    <HBox spacing="5.0" GridPane.rowIndex="1">
+      <TextArea disable="true" maxWidth="50.0" />
+      <TextArea fx:id="stack_TA" maxWidth="200.0" />
+    </HBox>
+    <GridPane gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+      </rowConstraints>
+      <Label styleClass="decision-cell" text="\$" GridPane.columnIndex="1" />
+      <Label styleClass="decision-cell" text="+" GridPane.columnIndex="2" />
+      <Label styleClass="decision-cell" text="-" GridPane.columnIndex="3" />
+      <Label styleClass="decision-cell" text="*" GridPane.columnIndex="4" />
+      <Label styleClass="decision-cell" text="/" GridPane.columnIndex="5" />
+      <Label styleClass="decision-cell" text="^" GridPane.columnIndex="6" />
+      <Label styleClass="decision-cell" text="(" GridPane.columnIndex="7" />
+      <Label styleClass="decision-cell" text=")" GridPane.columnIndex="8" />
+      <Label styleClass="decision-cell" text="F" GridPane.columnIndex="9" />
+      <Label styleClass="decision-cell" text="P" GridPane.columnIndex="10" />
+      <Label styleClass="decision-cell" text="\$" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell" text="+" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell" text="*" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell" text="-" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell" text="/" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell" text="^" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell" text="(" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell" text="F" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="5" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="6" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="6" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="6" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="6" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="6" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="6" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+      <Label styleClass="decision-cell-white" text="5" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="3" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="6" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="1" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="2" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="5" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+      <Label styleClass="decision-cell-white" text="6" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+    </GridPane>
+    <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+      <GridPane hgap="5.0" maxHeight="-Infinity">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label text="1" />
+        <Label text="2" GridPane.rowIndex="1" />
+        <Label text="3" GridPane.rowIndex="2" />
+        <Label text="4" GridPane.rowIndex="3" />
+        <Label text="5" GridPane.rowIndex="4" />
+        <Label text="6" GridPane.rowIndex="5" />
+        <Label text="Поместить символ из входной строки в стек" wrapText="true" GridPane.columnIndex="1" />
+        <Label text="Извлечь символ из стека и отправить его в выходную строку" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Удалить &quot;)&quot; из входной строки и &quot;(&quot; из стека" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Успешное окончание преобразования" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label text="Ошибка" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label text="Переслать символ из входной строки в выходную" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      </GridPane>
+      <Label text="Условные обозначения">
+        <VBox.margin>
+          <Insets top="5.0" />
+        </VBox.margin>
+      </Label>
+      <GridPane hgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label text="\$" />
+        <Label text="F" GridPane.rowIndex="1" />
+        <Label text="P" GridPane.rowIndex="2" />
+        <Label text="^" GridPane.rowIndex="3" />
+        <Label text="символ пустой строки или стека;" GridPane.columnIndex="1" />
+        <Label text="функция;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="переменная;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="бинарная операция возведения в степень" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      </GridPane>
+    </VBox>
+  </GridPane>
+  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Столбцам таблицы соответствуют элементы входной строки, а строкам - элементы, находящиеся на вершине стека" VBox.vgrow="ALWAYS" />
+  <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#tableMapping_B_action" text="Таблица соответствия между именами функций и их обозначениями на этапе преобразования выражения и вычисления его значения" VBox.vgrow="ALWAYS" />
+  <HBox alignment="BOTTOM_CENTER" spacing="5.0" VBox.vgrow="ALWAYS">
+    <Button fx:id="tact_B" disable="true" mnemonicParsing="false" onAction="#tact_B_action" text="Такт" />
+    <Button fx:id="start_B" mnemonicParsing="false" onAction="#start_B_action" text="Старт" />
+    <Button mnemonicParsing="false" onAction="#stop_B_action" text="Стоп" />
+  </HBox>
+</VBox>

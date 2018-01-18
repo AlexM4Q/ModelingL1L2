@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            stylesheets="@input.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.modeling.lab1lab2.controllers.InputController">
+  <center>
+    <VBox spacing="5.0" BorderPane.alignment="CENTER">
+      <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </padding>
+      <TextField fx:id="input_TF" promptText="Строка ввода..."/>
+      <Separator prefWidth="200.0"/>
+      <HBox alignment="CENTER_LEFT" spacing="5.0">
+        <Button mnemonicParsing="false" onAction="#home_B_action" text="&lt;&lt;-"/>
+        <Button mnemonicParsing="false" onAction="#left_B_action" text="&lt;-"/>
+        <Button mnemonicParsing="false" onAction="#right_B_action" text="-&gt;"/>
+        <Button mnemonicParsing="false" onAction="#end_B_action" text="-&gt;&gt;"/>
+        <HBox alignment="CENTER_RIGHT" spacing="5.0" HBox.hgrow="ALWAYS">
+          <Button mnemonicParsing="false" onAction="#clear_B_action" text="Очистить"/>
+          <Button mnemonicParsing="false" onAction="#backspace_B_action" text="Backspace"/>
+        </HBox>
+      </HBox>
+      <Separator prefWidth="200.0"/>
+      <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity"/>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity"/>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity"/>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity"/>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity"/>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity"/>
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" valignment="CENTER" vgrow="SOMETIMES"/>
+          <RowConstraints maxHeight="-Infinity" valignment="CENTER" vgrow="SOMETIMES"/>
+          <RowConstraints maxHeight="-Infinity" valignment="CENTER" vgrow="SOMETIMES"/>
+          <RowConstraints maxHeight="-Infinity" valignment="CENTER" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="7"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="8"
+                GridPane.columnIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="9"
+                GridPane.columnIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="4"
+                GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="5"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="6"
+                GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="1"
+                GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="2"
+                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="3"
+                GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="simple-button" text="("
+                GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="digital-button" text="0"
+                GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="simple-button" text=")"
+                GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="simple-button" text="+"
+                GridPane.columnIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="simple-button" text="-"
+                GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="simple-button" text="*"
+                GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="simple-button" text="/"
+                GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="function-button" text="sin"
+                GridPane.columnIndex="4"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="function-button" text="arcsin"
+                GridPane.columnIndex="5"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="function-button" text="cos"
+                GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="function-button" text="arccos"
+                GridPane.columnIndex="5" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="function-button" text="tg"
+                GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="function-button" text="arctg"
+                GridPane.columnIndex="5" GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="function-button" text="ctg"
+                GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#input_B_action" styleClass="function-button" text="arcctg"
+                GridPane.columnIndex="5" GridPane.rowIndex="3"/>
+      </GridPane>
+      <Separator prefWidth="200.0"/>
+      <HBox spacing="5.0">
+        <Button defaultButton="true" mnemonicParsing="false" onAction="#ok_B_action" text="Ок"/>
+        <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel_B_action" text="Отмена"/>
+      </HBox>
+    </VBox>
+  </center>
+</BorderPane>

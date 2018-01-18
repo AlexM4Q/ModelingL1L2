@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.modeling.lab1lab2.controllers.MainController">
+  <center>
+    <VBox>
+      <TabPane fx:id="tabs_TP" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <Tab text="Преобразование выражения к постфиксной форме">
+          <fx:include fx:id="converter" source="../converter/converter.fxml"/>
+        </Tab>
+        <Tab text="Вычисление значений выражений по их постфиксной форме">
+          <fx:include fx:id="calculator" source="../calculator/calculator.fxml"/>
+        </Tab>
+      </TabPane>
+    </VBox>
+  </center>
+  <top>
+    <MenuBar BorderPane.alignment="CENTER">
+      <Menu mnemonicParsing="false" text="Файл"/>
+      <Menu mnemonicParsing="false" text="?"/>
+    </MenuBar>
+  </top>
+  <bottom>
+    <HBox spacing="5.0" BorderPane.alignment="CENTER">
+      <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </padding>
+      <VBox alignment="CENTER_LEFT" spacing="5.0">
+        <Label text="Режим"/>
+        <RadioButton mnemonicParsing="false" onAction="#modeTact_RB_action" text="Пошаговый (управляемый пользователем)">
+          <toggleGroup>
+            <ToggleGroup fx:id="mode"/>
+          </toggleGroup>
+        </RadioButton>
+        <RadioButton mnemonicParsing="false" onAction="#modeAuto_RB_action" selected="true" text="Автоматический (по таймеру)" toggleGroup="$mode"/>
+      </VBox>
+      <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+        <CheckBox fx:id="autoMove_CB" disable="true" mnemonicParsing="false" text="В случае успешного завершения преобразования автопереход в режим вычисления"/>
+        <HBox spacing="5.0">
+          <Label text="Задержка:"/>
+          <Label fx:id="delay_L" text="0"/>
+          <Label text="мс"/>
+          <HBox alignment="CENTER_RIGHT" spacing="5.0" HBox.hgrow="ALWAYS">
+            <CheckBox disable="true" mnemonicParsing="false" text="Введение"/>
+            <CheckBox disable="true" mnemonicParsing="false" text="Звуковое сопровождение"/>
+          </HBox>
+        </HBox>
+        <Slider fx:id="delay_S" majorTickUnit="1000.0" max="10000.0" minorTickCount="10" showTickLabels="true" showTickMarks="true"/>
+      </VBox>
+    </HBox>
+  </bottom>
+</BorderPane>

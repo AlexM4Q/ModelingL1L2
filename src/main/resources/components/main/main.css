@@ -1,0 +1,12 @@
+.decision-cell {
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+    -fx-alignment: center;
+}
+
+.decision-cell-white {
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+    -fx-alignment: center;
+    -fx-background-color: white;
+}

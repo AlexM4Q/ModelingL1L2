@@ -1,0 +1,15 @@
+.simple-button {
+    -fx-pref-width: 30;
+    -fx-pref-height: 30;
+}
+
+.digital-button {
+    -fx-pref-width: 30;
+    -fx-pref-height: 30;
+    -fx-text-fill: red;
+}
+
+.function-button {
+    -fx-pref-width: 60;
+    -fx-pref-height: 30;
+}
