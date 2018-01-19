@@ -41,7 +41,7 @@ public enum Functions {
     }
 
     public char getCode() {
-        return code;
+        return Character.toUpperCase(code);
     }
 
 }
