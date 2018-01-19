@@ -217,7 +217,9 @@ public class Converter extends Processable {
     }
 
     private void handleStack() {
-        String stackOut = stack.stream().map(Object::toString).collect(Collectors.joining("\n"));
+        final ArrayList<Character> reversedStack = new ArrayList<>(stack);
+        Collections.reverse(reversedStack);
+        String stackOut = reversedStack.stream().map(Object::toString).collect(Collectors.joining("\n"));
         for (Entry<String, Character> entry : a1.entrySet()) {
             stackOut = stackOut.replace(entry.getValue().toString(), entry.getKey());
         }
